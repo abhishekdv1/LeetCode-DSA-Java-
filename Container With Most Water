@@ -1,0 +1,28 @@
+class Solution {
+    public int maxArea(int[] height) {
+         int l = 0,r = height.length-1,max = 0, cal_area=0;
+         while(l<r){
+             int lh = height[l],rh = height[r];
+             
+             if(lh<rh)
+             {
+                 cal_area = lh*(r-l);
+                 l++;
+             }
+             else
+             {
+                 cal_area = rh*(r-l);
+                 r--;
+             }
+             if(cal_area > max)  max = cal_area;
+         }
+        return max;
+    }
+}
+
+
+60 / 60 test cases passed.
+Status: Accepted
+Runtime: 2 ms
+Memory Usage: 52.3 MB
+
