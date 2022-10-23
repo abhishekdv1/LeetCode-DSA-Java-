@@ -1,0 +1,20 @@
+11510 / 11510 test cases passed.
+Status: Accepted
+Runtime: 8 ms
+Memory Usage: 41.4 MB
+
+ runtime beats 99.07 % of java submissions.
+ memory usage beats 97.20 % of java submissions.
+ 
+class Solution {
+    public boolean isPalindrome(int x) {
+        if(x<0 ||(x%10==0 && x!=0))
+            return false;
+        int pal = 0;
+        while(x>pal){
+            pal = pal*10 + x%10;
+            x/=10;
+        }
+      return (x == pal || x == pal/10);  
+    } 
+} 
