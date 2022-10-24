@@ -1,0 +1,15 @@
+Runtime: 1 ms, faster than 95.91% of Java online submissions for Final Value of Variable After Performing Operations.
+Memory Usage: 41.6 MB, less than 97.57% of Java online submissions for Final Value of Variable After Performing Operations.
+
+class Solution {
+    public int finalValueAfterOperations(String[] operations) {
+        int x=0;
+        for(int i = 0;i<operations.length;i++){
+           if(operations[i].contains("++")) x++;
+           else x--;
+           // else if(operations[i].contains("--")) x--;
+           // else continue;                                      //when using the comments ,comment the 9th line. 
+        }
+     return x;   
+    }
+}
