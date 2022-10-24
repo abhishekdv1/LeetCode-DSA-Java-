@@ -1,0 +1,39 @@
+//Here are the two ways in which i could solve this problem, however there may exist solutions that are more optimal.
+
+
+class Solution {
+    public String defangIPaddr(String address) {
+     String s = address.replace(".","[.]"); 
+     return s;       
+    }
+}
+
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Defanging an IP Address.
+Memory Usage: 40 MB, less than 97.23% of Java online submissions for Defanging an IP Address.
+
+
+
+
+
+class Solution {
+    public String defangIPaddr(String address) {
+        StringBuilder sv =new StringBuilder();
+       for(char c: address.toCharArray()){
+         if(c=='.'){
+           sv.append("[");
+           sv.append(".");
+           sv.append("]");
+         }else sv.append(c);
+      }
+      return sv.toString();
+  }
+}
+
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Defanging an IP Address.
+Memory Usage: 40.2 MB, less than 91.55% of Java online submissions for Defanging an IP Address.
+
+
+
+
+
+
