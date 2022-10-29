@@ -1,0 +1,32 @@
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Max Increase to Keep City Skyline.
+Memory Usage: 41.8 MB, less than 94.75% of Java online submissions for Max Increase to Keep City Skyline.
+
+
+
+
+class Solution {
+    public int maxIncreaseKeepingSkyline(int[][] grid) { 
+        int total = 0;   
+        int max_col_val[] = new int[grid.length];
+        int max_row_val[] = new int[grid.length];
+        
+        for(int i=0;i<grid.length;i++){
+            for(int j=0;j<grid.length;j++){
+                max_row_val[i] = Math.max(max_row_val[i],grid[i][j]);
+                max_col_val[j] = Math.max(max_col_val[j],grid[i][j]);
+            }
+        }
+        for(int i=0;i<grid.length;i++)
+            for(int j=0;j<grid.length;j++) total += Math.min(max_row_val[i],max_col_val[j])-grid[i][j];
+       return total;     
+    }
+}
+
+/*
+we declare a count variable along with two arrays that will keep count of the max height in each column and row of  the grid 
+total += Math.min(max_col_val[],max_row_val[])-grid[][]; 
+this formula will calculate the minimum height that a building can
+be raised to after getting the minimum of the maximum column and 
+row heights for the building in that grid and then subtracting 
+it with its current height and adding that diff to its current height.
+*/ 
