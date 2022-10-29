@@ -1,5 +1,7 @@
-/*Runtime: 0 ms, faster than 100.00% of Java online submissions for Jewels and Stones.
-Memory Usage: 40.3 MB, less than 97.26% of Java online submissions for Jewels and Stones.*/
+/*
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Jewels and Stones.
+Memory Usage: 40.3 MB, less than 98.87% of Java online submissions for Jewels and Stones.
+*/
 
 
 class Solution {
