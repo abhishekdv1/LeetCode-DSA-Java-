@@ -1,0 +1,18 @@
+class Solution {
+    public void reverseString(char[] s) {
+           int a_pointer = 0,b_pointer = s.length-1;
+        
+        while(a_pointer <= b_pointer){
+            char t = s[a_pointer];
+            s[a_pointer] = s[b_pointer];
+            s[b_pointer] = t;
+            
+            a_pointer += 1;
+            b_pointer -= 1;
+        }
+    }
+}
+
+
+/*Runtime: 1 ms, faster than 99.94% of Java online submissions for Reverse String.
+Memory Usage: 53.9 MB, less than 79.50% of Java online submissions for Reverse String.*/
