@@ -7,3 +7,6 @@
        return cl;  
      }
  }
+
+// Runtime: 1 ms, faster than 100.00% of Java online submissions for Single Number.
+// Memory Usage: 42.2 MB, less than 94.91% of Java online submissions for Single Number.
