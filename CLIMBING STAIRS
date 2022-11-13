@@ -1,0 +1,13 @@
+class Solution {
+    public int climbStairs(int n) {
+        int dapp[] = new int [n+1];
+        dapp[0]=1;
+        dapp[1]=1;
+        for(int i = 2;i<=n;i++){
+            dapp[i] = dapp[i-1]+dapp[i-2];//
+        }
+        return dapp[n];
+    }
+}
+/*Runtime: 0 ms, faster than 100.00% of Java online submissions for Climbing Stairs.
+Memory Usage: 40.7 MB, less than 61.81% of Java online submissions for Climbing Stairs.*/
