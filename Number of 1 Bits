@@ -1,0 +1,18 @@
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        int count = 0;
+        while(n!=0){
+            n=n&(n-1);
+            count+=1;
+        }
+        return count;
+    }
+}
+
+/*Runtime: 0 ms, faster than 100.00% of Java online submissions for Number of 1 Bits.
+Memory Usage: 39.2 MB, less than 95.41% of Java online submissions for Number of 1 Bits.
+
+
+1011 1010 +1 1010 1001 +1 1000 0111 +1  0000 it then goes out of while loop 
+*/
