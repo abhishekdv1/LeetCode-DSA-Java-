@@ -1,0 +1,36 @@
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+       List<List<Integer>> res = new ArrayList<>();
+       palind(res,nums,0); 
+       return res; 
+    }
+    
+    void palind(List<List<Integer>> resi,int[] nums,int start){
+        if(nums.length==start){
+            resi.add(toList(nums));
+        }
+        else{             
+        for(int i =start;i<nums.length;i++){
+            swap(i,start,nums);
+            palind(resi,nums,start+1);
+            swap(i,start,nums);
+         }
+        }    
+    }
+    
+    public List<Integer> toList(int[] nums){
+         List<Integer> result = new ArrayList<>();
+        for(int i : nums)
+            result.add(i);
+        
+        return result;    
+    } 
+    public void swap(int i,int j, int[] nums){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
+
+/*Runtime: 0 ms, faster than 100.00% of Java online submissions for Permutations.
+Memory Usage: 42.5 MB, less than 91.87% of Java online submissions for Permutations.*/
